@@ -1,0 +1,28 @@
+{
+  "globals": {
+    "__TS_CONFIG__": "tsconfig.spec.json",
+    "__TRANSFORM_HTML__": true
+  },
+  "transform": {
+    "^.+\\.(ts|js|html)$": "<rootDir>/node_modules/jest-preset-angular/preprocessor.js"
+  },
+  "mapCoverage": true,
+  "collectCoverage": true,
+  "coverageDirectory": "coverage",
+  "coveragePathIgnorePatterns": [
+    "/node_modules/",
+    "/config/"
+  ],
+  "moduleFileExtensions": [
+    "ts",
+    "js",
+    "html"
+  ],
+  "moduleNameMapper": {
+    "(.*)": "<rootDir>/src/$1"
+  },
+  "transformIgnorePatterns": [
+    "node_modules/(?!@ngrx)"
+  ],
+  "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|js)$"
+}
